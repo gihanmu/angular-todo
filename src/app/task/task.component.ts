@@ -28,4 +28,8 @@ export class TaskComponent implements OnInit {
       }
     )
   }
+
+  public testFunc(){
+    return {"name" : "Gihan"}
+  }
 }
