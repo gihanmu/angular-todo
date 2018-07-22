@@ -62,4 +62,15 @@ export class TaskComponent implements OnInit {
     )
 
   }
+
+  public markAsDone(task){
+    task.status = 'done';
+    this._taskService.update(task)
+    .subscribe(
+      data => {
+        this.getAllTasks();
+      }
+    )
+
+  }
 }

@@ -1,12 +1,12 @@
 
   <div>
     <div *ngFor="let task of tasks" class="card" style="width: 18rem;">
-      <div class="card-body">
+      <div class="card-body" [ngClass]="{'task-done': task.status === 'done'}">
         <button (click)="deleteTask(task)">Delete</button>
         <h5 class="card-title">{{task.title}}</h5>
         <h6 class="card-subtitle mb-2 text-muted">{{task.date}}</h6>
         <p class="card-text">Hello World</p>
-        <a href="#" class="card-link">Mark As Done</a>
+        <a href="#" class="card-link" *ngIf="task.status !== 'done'" (click)="markAsDone(task)">Mark As Done</a>
         
       </div>
     </div>

@@ -21,13 +21,19 @@
       "id": 1,
       "date": "2018-03-05",
       "title": "Pay credit card bill",
-      "status": "todo"
+      "status": "done"
     },
     {
       "id": 2,
       "date": "2018-02-23",
       "title": "Pay telephone bill",
       "status": "done"
+    },
+    {
+      "title": "cccccc",
+      "date": "2018-07-12",
+      "status": "done",
+      "id": 3
     }
   ]
 }

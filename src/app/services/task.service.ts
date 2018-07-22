@@ -49,4 +49,15 @@ export class TaskService extends DataService {
     });
   }
 
+  update(task : Task){
+    let url = `${this._baseUrl}${this.endPointUri}/${task.id}`;    
+    return this.doPutRequest(url, task)
+    .map((res: Response) => {
+        return <Boolean>res.json();
+    })
+    .catch((error: Response | any) => {
+        return Observable.throw(error);
+    });
+  }
+
 }
