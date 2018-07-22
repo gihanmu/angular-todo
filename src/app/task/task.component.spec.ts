@@ -38,26 +38,4 @@ describe('TaskComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  // it('should create', () => {
-    
-  //   expect(component.getAllTasks()).toBeTruthy();
-  // });
-
-//   describe('getVideos()', () => {
-
-//     it('should return an Observable<Array<Video>>',
-//         inject([TaskService, XHRBackend], (taskService, mockBackend) => {
-
-      
-
-//         taskService.getAllTasks().subscribe((videos) => {
-//           expect(videos.length).toBe(3);
-         
-//         });
-
-//     }));
-
- 
-// });
-
 });
