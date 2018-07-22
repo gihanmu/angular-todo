@@ -1,0 +1,18 @@
+.card {
+    border: 1px solid black;
+    background: rgba(0,0,0,.03);
+    color: rgba(0, 0, 0, 0.473);
+    margin-top: 10px;
+}
+
+.card-body{
+    padding: 10px;
+
+   
+}
+
+.card-body .card-title{
+    color: red;
+    margin-left: 40px;
+    
+}
