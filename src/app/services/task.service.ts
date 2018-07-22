@@ -25,6 +25,28 @@ export class TaskService extends DataService {
         .catch((error: Response | any) => {
             return Observable.throw(error);
         });
-}
+  }
+
+  save(data: Task) {
+    let url = `${this._baseUrl}${this.endPointUri}`;    
+    return this.doPostRequest(url, data)
+        .map((res: Response) => {
+            return <Task[]>res.json();
+        })
+        .catch((error: Response | any) => {
+            return Observable.throw(error);
+        });
+  }
+
+  delete(task : Task){
+    let url = `${this._baseUrl}${this.endPointUri}/${task.id}`;    
+    return this.doDelRequest(url)
+    .map((res: Response) => {
+        return <Boolean>res.json();
+    })
+    .catch((error: Response | any) => {
+        return Observable.throw(error);
+    });
+  }
 
 }

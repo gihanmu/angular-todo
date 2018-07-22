@@ -2,6 +2,7 @@
   <div>
     <div *ngFor="let task of tasks" class="card" style="width: 18rem;">
       <div class="card-body">
+        <button (click)="deleteTask(task)">Delete</button>
         <h5 class="card-title">{{task.title}}</h5>
         <h6 class="card-subtitle mb-2 text-muted">{{task.date}}</h6>
         <p class="card-text">Hello World</p>
@@ -10,7 +11,13 @@
       </div>
     </div>
 
-    <button >New Task</button>
+    <button  (click)="displayAddNewTask()" >New Task</button>
+
+    <form *ngIf="isAddNewTask">
+        <input type="text" name="taskTitle" [(ngModel)]="newTask.title" placeholder="Title">
+        <button (click)="addTask()">Add</button>        
+        
+    </form>
 
   </div>
 

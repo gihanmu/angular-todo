@@ -37,7 +37,5 @@ describe('TaskComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('testFunc name must be Gihan', () => {
-    expect(component.testFunc().name).toBe('Gihan')
-  });
+ 
 });
