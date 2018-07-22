@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, inject } from '@angular/core/testing';
 import {
   HttpModule,
   Http,
@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TaskComponent } from './task.component';
 import { TaskService } from '../services/task.service';
 import { DataService } from '../services/data.service';
+import { FormsModule } from '@angular/forms';
 
 describe('TaskComponent', () => {
   let component: TaskComponent;
@@ -18,7 +19,7 @@ describe('TaskComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ TaskComponent ],
-      imports: [HttpModule, HttpClientModule],
+      imports: [HttpModule, HttpClientModule, FormsModule],
       providers: [
         TaskService,
         DataService
@@ -37,5 +38,26 @@ describe('TaskComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  // it('should create', () => {
+    
+  //   expect(component.getAllTasks()).toBeTruthy();
+  // });
+
+//   describe('getVideos()', () => {
+
+//     it('should return an Observable<Array<Video>>',
+//         inject([TaskService, XHRBackend], (taskService, mockBackend) => {
+
+      
+
+//         taskService.getAllTasks().subscribe((videos) => {
+//           expect(videos.length).toBe(3);
+         
+//         });
+
+//     }));
+
  
+// });
+
 });
